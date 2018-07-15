@@ -1,0 +1,14 @@
+{
+  "code": 200,
+  "success": true,
+  "message": null,
+  "data": {
+    "id": 52,
+    "name": "James Bermingrot",
+    "email": "henomezop@mailinator.net",
+    "phone": "73432543252",
+    "avatar": "http://phptest.loc/images/users/avatars/52/t_c46f68c9e96874fa646a44ba52efac5c15e7b216.jpeg",
+    "created_at": "2018-07-12 12:20:42",
+    "updated_at": "2018-07-13 09:02:27"
+  }
+}

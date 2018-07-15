@@ -1,0 +1,14 @@
+{
+  "code": {
+    "type": "integer",
+    "required": true
+  },
+  "success": {
+    "type": "boolean",
+    "required": true
+  },
+  "message": {
+    "type": "string",
+    "required": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "current_page": {
+    "type": "integer",
+    "required": true
+  },
+  "data": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "required": true
+        },
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "required": true
+        },
+        "phone": {
+          "type": "string",
+          "required": true
+        },
+        "avatar": {
+          "type": ["null", "string"],
+          "required": true,
+          "description": "URL to user avatar image or to default placeholder"
+        },
+        "created_at": {
+          "type": "string",
+          "required": true
+        },
+        "updated_at": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  },
+  "first_page_url": {
+    "type": "string",
+    "required": true
+  },
+  "from": {
+    "type": ["null", "integer"],
+    "required": true
+  },
+  "last_page": {
+    "type": "integer",
+    "required": true
+  },
+  "last_page_url": {
+    "type": "string",
+    "required": true
+  },
+  "next_page_url": {
+    "type": ["null", "string"],
+    "required": true
+  },
+  "path": {
+    "type": "string",
+    "required": true
+  },
+  "per_page": {
+    "type": "integer",
+    "required": true
+  },
+  "prev_page_url": {
+    "type": ["null", "string"],
+    "required": true
+  },
+  "to": {
+    "type": ["null", "integer"],
+    "required": true
+  },
+  "total": {
+    "type": ["null", "integer"],
+    "required": true
+  }
+}

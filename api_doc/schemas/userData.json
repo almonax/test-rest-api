@@ -1,0 +1,51 @@
+{
+  "code": {
+    "type": "integer",
+    "required": true
+  },
+  "success": {
+    "type": "boolean",
+    "required": true
+  },
+  "message": {
+    "type": [
+      "null", "string"
+    ],
+    "required": true
+  },
+  "data": {
+    "type": "object",
+    "required": true,
+    "properties": {
+      "id": {
+        "type": "integer",
+        "required": true
+      },
+      "name": {
+        "type": "string",
+        "required": true
+      },
+      "email": {
+        "type": "string",
+        "required": true
+      },
+      "phone": {
+        "type": "string",
+        "required": true
+      },
+      "avatar": {
+        "type": ["null", "string"],
+        "required": true,
+        "description": "URL to user avatar image or to default placeholder"
+      },
+      "created_at": {
+        "type": "string",
+        "required": true
+      },
+      "updated_at": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

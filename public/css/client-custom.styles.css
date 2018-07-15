@@ -1,0 +1,15 @@
+.table tbody > tr > td {
+    background-color: #FFF !important;
+}
+
+.top-page-ui {
+    padding: 0 !important;
+}
+
+.table a {
+    color: #2bb6a3;
+}
+
+.user-list tbody td > img, .user-avatar {
+    border-radius: 50%;
+}

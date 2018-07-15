@@ -1,0 +1,137 @@
+#%RAML 1.0
+title: Test API Razenkov M.
+version: 1
+baseUri: http://phptest.loc/api/v1
+mediaType: application/json
+protocols: [http]
+types:
+  name:
+    type: string
+    minLength: 1
+    maxLength: 60
+  email:
+    type: string
+    pattern: ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
+  phone:
+    type: string
+    pattern: ^7[0-9]{10}$
+  avatar:
+    type: file
+    fileTypes: ['image/jpeg', 'image/png', 'image/gif']
+/users:
+  get:
+    queryParameters:
+      page:
+        type: integer
+        required: false
+        description: paginate results, e.g. /users?page=
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/userListData.json
+            example: !include examples/userListData.json
+  post:
+    body:
+      application/x-www-form-urlencoded:
+        properties:
+          name:
+            required: true
+            type: name
+          email:
+            required: true
+            type: email
+          phone:
+            required: true
+            type: phone
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/userData.json
+            example: !include examples/userData.json
+      400:
+        body:
+          application/json:
+            schema: !include schemas/dataValidation.json
+            example: !include examples/dataValidation.json
+/users/{id}:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/userData.json
+            example: !include examples/userData.json
+      404:
+        body:
+          application/json:
+            schema: !include schemas/userNotFound.json
+            example: !include examples/userNotFound.json
+  put:
+    body:
+      application/x-www-form-urlencoded:
+        properties:
+          name:
+            required: false
+            type: name
+          email:
+            required: false
+            type: email
+          phone:
+            required: false
+            type: phone
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/updatedSuccessful.json
+            example: !include examples/updatedSuccessful.json
+      400:
+        body:
+          application/json:
+            schema: !include schemas/dataValidation.json
+            example: !include examples/dataValidation.json
+  delete:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/updatedSuccessful.json
+            example: |
+              {
+                "code": 200,
+                "success": true,
+                "message": "User has been success deleted"
+              }
+      404:
+        body:
+          application/json:
+            schema: !include schemas/userNotFound.json
+            example: !include examples/userNotFound.json
+  /avatar:
+    post:
+      description: update user avatar
+      body:
+        multipart/form-data:
+          properties:
+            avatar:
+              type: avatar
+              required: false
+              description: update user avatar image
+      responses:  
+        200:
+          body:
+            application/json:
+              schema: !include schemas/updatedSuccessful.json
+              example: !include examples/updatedSuccessful.json
+        400:
+          body:
+            application/json:
+              schema: !include schemas/dataValidation.json
+              example: !include examples/dataValidation.json
+        404:
+          body:
+            application/json:
+              schema: !include schemas/userNotFound.json
+              example: !include examples/userNotFound.json

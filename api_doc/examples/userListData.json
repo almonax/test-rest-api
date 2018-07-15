@@ -1,0 +1,60 @@
+{
+  "current_page": 1,
+  "data": [
+    {
+      "id": 52,
+      "name": "Test user",
+      "email": "henomezop@mailinator.net",
+      "phone": "73432543252",
+      "avatar": "http://phptest.loc/images/users/avatars/52/t_c46f68c9e96874fa646a44ba52efac5c15e7b216.jpeg",
+      "created_at": "2018-07-12 12:20:42",
+      "updated_at": "2018-07-13 09:02:27"
+    },
+    {
+      "id": 45,
+      "name": "Ms. Gladys Osinski Jr.",
+      "email": "lindgren.tanner@hotmail.com",
+      "phone": "77508033833",
+      "avatar": "http://phptest.loc/images/users/avatars/45/t_c45023ecc71619c1a9692285412f9d15b0485c49.jpg",
+      "created_at": "2018-07-12 11:49:18",
+      "updated_at": "2018-07-12 11:49:18"
+    },
+    {
+      "id": 40,
+      "name": "Glennie Boyer",
+      "email": "asa06@kutch.org",
+      "phone": "76581534902",
+      "avatar": "http://phptest.loc/images/users/avatars/40/t_d2b1fdfb0090f258c93a86aa3f87129daaaad0c0.jpg",
+      "created_at": "2018-07-12 11:49:11",
+      "updated_at": "2018-07-12 11:49:11"
+    },
+    {
+      "id": 41,
+      "name": "Dr. Maria Gerlach V",
+      "email": "kihn.alexandrine@rogahn.com",
+      "phone": "73423384488",
+      "avatar": "http://phptest.loc/images/users/avatars/41/t_8a293be88621dc7fc6279eb9e8b61f2da4f5ebbd.jpg",
+      "created_at": "2018-07-12 11:49:11",
+      "updated_at": "2018-07-12 11:49:12"
+    },
+    {
+      "id": 39,
+      "name": "Dr. Ardith Nader",
+      "email": "vicky.veum@yahoo.com",
+      "phone": "71249724862",
+      "avatar": "http://phptest.loc/images/users/avatars/39/t_e7c27cf45cae664f3c6def242239fa95279f633a.jpg",
+      "created_at": "2018-07-12 11:49:10",
+      "updated_at": "2018-07-12 11:49:10"
+    }
+  ],
+  "first_page_url": "http://phptest.loc/api/v1/users?page=1",
+  "from": 1,
+  "last_page": 9,
+  "last_page_url": "http://phptest.loc/api/v1/users?page=9",
+  "next_page_url": "http://phptest.loc/api/v1/users?page=2",
+  "path": "http://phptest.loc/api/v1/users",
+  "per_page": 5,
+  "prev_page_url": null,
+  "to": 5,
+  "total": 43
+}
